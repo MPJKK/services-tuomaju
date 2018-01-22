@@ -1,0 +1,12 @@
+<h1 id="otsikko">
+    {{ tervehdys }}
+</h1>
+<ul>
+    <li *ngFor="let item of kaikkiMedia">
+        <img [src]="mediaUrl + item.filename.split('.', 1) + '-tn320.png'">
+        <br>
+        <h1>{{ item.title }}</h1>
+        <br>
+        <p>{{ item.description }}</p>
+    </li>
+</ul>
