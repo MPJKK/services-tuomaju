@@ -1,0 +1,58 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:host .pysakit{
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+
+}
+
+:host .pysakki{
+  margin: 1em;
+  padding: 1em;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #E74C3C;
+  list-style: none;
+  border-radius: 20px 20px 20px 20px;
+}
+
+:host .pysakki .dosariNimi{
+  margin:  0.5em 2em 1em 2em;
+}
+
+
+:host .reitit {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  color: #E74C3C;
+}
+
+:host .reitti {
+  margin-bottom: 1em;
+  padding: 1em;
+  width: calc(100% - 2em);
+
+  display: flex;
+  background-color: #F4F6F7;
+
+}

@@ -13,28 +13,18 @@ export class RoutesComponent implements OnInit {
     }
 
     pysakki = 'Gransinmäki';
-    haku = '';
+    haku: any;
 
-    getStops(nimi) {
-        this.digitransitService.getRoutes(nimi).subscribe(response => {
-            //console.log(response.data['stops']);
-            return response.data['stops'];
-        });
-    }
 
     ngOnInit() {
-        document.getElementById('hae').addEventListener('click', e => {
-            e.preventDefault();
-            this.haku = document.getElementById('haku').getAttribute('value');
+        this.digitransitService.getRoutes(this.pysakki).subscribe(response => {
+            this.haku = response.data['stops'];
             console.log(this.haku);
-            console.log(this.getStops(this.pysakki));
         });
 
-        //console.log(this.getStops());
+        let url_string = window.location.href;
 
     }
-
-
 
 
 }

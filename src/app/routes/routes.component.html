@@ -1,7 +1,11 @@
-<form>
-    <input title="asd" id="haku" type="text">
-    <input id="hae" type="submit">
-</form>
-<ul>
-
+<h1 class="otsikko">Reittejä</h1>
+<ul class="pysakit">
+    <li *ngFor="let dosari of haku" class="pysakki">
+        <h1 class="dosariNimi">{{ dosari.name }}</h1>
+        <ul class="reitit">
+            <li *ngFor="let reitti of dosari.patterns" class="reitti">
+                <p>{{ reitti.route.shortName }}: {{ reitti.route.longName }}</p>
+            </li>
+        </ul>
+    </li>
 </ul>
